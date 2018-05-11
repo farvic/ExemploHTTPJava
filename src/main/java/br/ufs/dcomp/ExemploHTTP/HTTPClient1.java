@@ -22,7 +22,7 @@ public class HTTPClient1
 
         String CRLF = "\r\n";
         
-        String msg = "GET / HTTP/1.1" + CRLF +
+        String msg = "GET /~cmburbira/ HTTP/1.1" + CRLF +
                      "Host: www.ic.unicamp.br" + CRLF +
                      CRLF;
 
@@ -42,7 +42,7 @@ public class HTTPClient1
                 line += c;
             } while (c != '\n');
             System.out.print(line);
-        } while (line.trim().length() > 0); // Finaliza quando a linha lida é de comprimento 0, indicando o fim do cabeçalho
-        //} while (true); // Forma incorreta (dirty), porém rápida, de exibir cabeçalho e conteúdo
+        //} while (line.trim().length() > 0); // Finaliza quando a linha lida é de comprimento 0, indicando o fim do cabeçalho
+        } while (true); // Forma incorreta (dirty), porém rápida, de exibir cabeçalho e conteúdo
     } 
 }
